@@ -109,20 +109,22 @@ setopt hist_verify            # show command with history expansion to user befo
 #setopt share_history         # share command history data
 #set a fancy prompt (non-color, unless we know we "want" color)
 
-
 # Some more ls aliases
 alias ll='ls -l'
 alias l='ls -la'
 alias la='ls -A'
+
 # Update
-alias rb="source ~/.zshrc /root/.config/nvim ~/.motd_shown $HOME/tmux.conf"
+alias rb="source ~/.zshrc ~/config/nvim ~/.motd_shown ~/tmux.conf"
 
 # Fat keys
 alias q="exit"
 alias cl="clear"
+
 # Force zsh to show the complete history
 alias history="history 0"
 alias hsi="history | grep"
+
 # Home
 alias hm="cd ~"
 
@@ -130,7 +132,6 @@ alias hm="cd ~"
 alias cat="batcat"
 alias catold="cat"
 alias catnl="batcat --paging=never"
-
 
 #arreglar background color of dirs
 #LSCOLORS="ow=01;36;40" && export LS_COLORS_
@@ -140,14 +141,19 @@ alias musicdir="/mnt/d/misDocumentos/musica"
 alias musicopen="explorer.exe 'D:\misDocumentos\musica'"
 alias my=" /mnt/c/Program\ Files\ \(x86\)/VideoLAN/VLC/vlc.exe 'D:\misDocumentos\musica'"
 alias tmux="tmux -2"
+alias vim="sudo nvim"
+
 # Edit all 
 alias editvimfile="vim /root/.config/nvim/init.vim"
-alias editall="nvim ~/.zshrc"
+alias editall="sudo nvim ~/.zshrc"
 alias editvim="vim /root/.config/nvim"
 alias cdd="cd .."
 
 #youtube donwload
-alias ytd="youtube-dl -x --audio-format mp3 "
+alias ytds="youtube-dl -x --audio-format mp3 "
 alias ytdlist="youtube-dl -x --audio-format mp3 -a "
+alias ytdv="youtube-dl -f 134 "
+#youtube-dl --extract-audio --audio-format mp3 --output "%(uploader)s%(title)s.%(ext)s" http://URL-.COM
 #youtube-dl -f best -a list.txt
 export PATH=$PATH:/usr/local/go/bin
+
