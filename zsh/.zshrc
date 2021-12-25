@@ -97,7 +97,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
 # History configurations
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
@@ -136,17 +135,15 @@ alias catnl="batcat --paging=never"
 #arreglar background color of dirs
 #LSCOLORS="ow=01;36;40" && export LS_COLORS_
 
+#private aliases
+source $HOME/.aliases
+
 # Accesos directos
-alias musicdir="/mnt/d/misDocumentos/musica"
-alias musicopen="explorer.exe 'D:\misDocumentos\musica'"
-alias my=" /mnt/c/Program\ Files\ \(x86\)/VideoLAN/VLC/vlc.exe 'D:\misDocumentos\musica'"
 alias tmux="tmux -2"
 alias vim="sudo nvim"
 
 # Edit all 
-alias editvimfile="vim /root/.config/nvim/init.vim"
 alias editall="sudo nvim ~/.zshrc"
-alias editvim="vim /root/.config/nvim"
 alias cdd="cd .."
 
 #youtube donwload
