@@ -108,11 +108,6 @@ setopt hist_verify            # show command with history expansion to user befo
 #setopt share_history         # share command history data
 #set a fancy prompt (non-color, unless we know we "want" color)
 
-# Some more ls aliases
-alias ll='ls -l'
-alias l='ls -la'
-alias la='ls -A'
-
 # Update
 alias rb="source ~/.zshrc ~/config/nvim ~/.motd_shown ~/tmux.conf"
 
@@ -123,9 +118,6 @@ alias cl="clear"
 # Force zsh to show the complete history
 alias history="history 0"
 alias hsi="history | grep"
-
-# Home
-alias hm="cd ~"
 
 # Better cat
 alias cat="batcat"
@@ -154,3 +146,9 @@ alias ytdv="youtube-dl -f 134 "
 #youtube-dl -f best -a list.txt
 export PATH=$PATH:/usr/local/go/bin
 
+alias ls='ls -lh --color=auto'
+alias dir='dir --color=auto'
+alias vdir='vdir --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
