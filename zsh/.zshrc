@@ -26,16 +26,34 @@ alias tmux="tmux -2"
 alias ytds="youtube-dl -x --audio-format mp3 "
 alias ytdlist="youtube-dl -x --audio-format mp3 -a "
 alias ytdv="youtube-dl -f 134 "
-alias dtok="cd /mnt/g/Mi\ unidad/tiktok\ cyber | youtube-dl -f 134 "
+alias dtok="cd /mnt/g/Mi\ unidad/tiktok\ cyber && youtube-dl -f 134 "
 #youtube-dl --extract-audio --audio-format mp3 --output "%(uploader)s%(title)s.%(ext)s" http://URL-.COM
 #youtube-dl -f best -a list.txt
 export PATH=$PATH:/usr/local/go/bin
-alias ls='ls -lh --color=auto'
+# anual aliases
+
+alias c='cd && clear'
+alias ll='lsd -lh --group-dirs=first'
+alias la='lsd -a --group-dirs=first'
+alias l='lsd --group-dirs=first'
+alias lla='lsd -lha --group-dirs=first'
+alias ls='lsd --group-dirs=first'
+alias cat='/bin/batcat'
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias gcm='git commit -m "$1"'
-
-
+[ -f~/.fzf.zsh ] && source ~/.fzf.zsh 
+ # Change cursor shape for different vi modes.
+function zle-keymap-select {
+  if [[ $KEYMAP == vicmd ]] || [[ $1 = 'block' ]]; then
+    echo -ne '\e[1 q'
+  elif [[ $KEYMAP == main ]] || [[ $KEYMAP == viins ]] || [[       $KEYMAP = '' ]] || [[ $1 = 'beam' ]]; then
+    echo -ne '\e[5 q'
+  fi
+}
+zle -N zle-keymap-select
+zle-line-init() { zle-keymap-select 'beam'}
+PROMPT="%(?:%{%} ﮊ:%{%} ﮊ) %{$fg[red]%}%c %{$reset_color%} $(git_prompt_info)"
