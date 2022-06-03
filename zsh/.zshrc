@@ -22,16 +22,23 @@ alias cl="clear"
 alias history="history 0"
 alias hsi="history | grep"
 # Access
+#alias mcode="/mnt/d/misDocumentos/PROGRAMAS/bootstrapper_mpv/mpv.exe '/mnt/d/misDocumentos/musica/code list'"
+alias mco='/mnt/d/misDocumentos/PROGRAMAS/bootstrapper_mpv/mpv.exe '\''D:\misDocumentos\musica\code list'\'
+
 alias tmux="tmux -2"
 alias ytds="youtube-dl -x --audio-format mp3 "
 alias ytdlist="youtube-dl -x --audio-format mp3 -a "
 alias ytdv="youtube-dl -f 134 "
 alias dtok="cd /mnt/g/Mi\ unidad/tiktok\ cyber && youtube-dl -f 134 "
+alias am="cd /mnt/d/misDocumentos/musica"
+
 #youtube-dl --extract-audio --audio-format mp3 --output "%(uploader)s%(title)s.%(ext)s" http://URL-.COM
 #youtube-dl -f best -a list.txt
 export PATH=$PATH:/usr/local/go/bin
+#newsboat
+alias nb='newsboat'
+alias enews='v /home/mikimiki/.newsboat/urls'
 # anual aliases
-
 alias c='cd && clear'
 alias ll='lsd -lh --group-dirs=first'
 alias la='lsd -a --group-dirs=first'
@@ -44,7 +51,7 @@ alias vdir='vdir --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-alias gcm='git commit -m "$1"'
+alias gcm='sudo git commit -m "$1"'
 [ -f~/.fzf.zsh ] && source ~/.fzf.zsh 
  # Change cursor shape for different vi modes.
 function zle-keymap-select {
